@@ -1,0 +1,21 @@
+<ion-view view-title="Home">
+  <ion-content class="padding">
+
+    <div class="list card">
+      <div class="item item-divider">Message</div>
+      <div class="item item-body">
+        <div> {{message}}        </div>
+      </div>
+    </div>
+
+    <div class="list card" >
+      <div class="item item-divider">
+        <b>Weapons we have!!</b>
+      </div>
+        <div ng-repeat="weapon in weapons">
+          <h2>weapon:   {{weapon.name}}</h2>
+        </div>
+    </div>
+
+  </ion-content>
+</ion-view>
