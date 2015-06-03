@@ -2,17 +2,24 @@
 
 angular.module('starter.controllers', [])
 
-.controller('HomeCtrl', function($scope) {
+.controller('HomeCtrl', function($scope, Weapons) {
 
   $scope.message = 'hello  world';
 
-  $scope.weapons = [{
-    "name": "mySword"
-  }, {
-    "name": "myClaws"
-  }, {
-    "name": "mySheld"
-  }];
+  // $scope.weapons = [{
+  //   "name": "mySword"
+  // }, {
+  //   "name": "myClaws"
+  // }, {
+  //   "name": "mySheld"
+  // }];
+
+
+  Weapons.all()
+  .then(function(weapons){
+    $scope.weapons = weapons;
+  });
+
 
 })
   .controller('DashCtrl', function($scope) {})

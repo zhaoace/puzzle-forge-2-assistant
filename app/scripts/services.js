@@ -47,4 +47,34 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+})
+
+
+.factory('Weapons', ['$http','$q' ,function($http,$q) {
+  // Might use a resource here that returns a JSON array
+
+  var weapons = {};
+  var getWeapons=function(){
+    var deferred=$q.defer();
+    $http.get('scripts/weapon_data.json').success(function(data){
+      weapons = data;
+      deferred.resolve('success');
+    });
+    return deferred.promise;
+  };
+
+
+  var all=function(){
+    var deferred=$q.defer();
+    getWeapons()
+    .then(function(){
+      deferred.resolve(weapons);
+    })
+    return deferred.promise;
+  };
+  return {
+    all:all
+  };
+
+
+}]);
