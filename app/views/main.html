@@ -1,23 +1,46 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div class="row ">
+  <div class="col-md-12">
+    <h1>puzzle forge 2 assistant </h1>
+
+
+    <!-- <h2>{{weaponTypes}}</h2> -->
+    <div class="btn-group">
+      <button class="btn btn-default btn-sm" ng-click="search = 'Armor' "> Armor </button>
+      <button class="btn btn-default btn-sm" ng-click="search = 'Axe' "> Axe </button>
+      <button class="btn btn-default btn-sm" ng-click="search = 'Claws' "> Claws </button>
+      <button class="btn btn-default btn-sm" ng-click="search = 'Mace' "> Mace </button>
+      <button class="btn btn-default btn-sm" ng-click="search = 'Shield' "> Shield </button>
+      <button class="btn btn-default btn-sm" ng-click="search = 'Shovel' "> Shovel </button>
+      <button class="btn btn-default btn-sm" ng-click="search = 'Spear' "> Spear </button>
+      <button class="btn btn-default btn-sm" ng-click="search = 'Staff' "> Staff </button>
+      <button class="btn btn-default btn-sm" ng-click="search = 'Sword' "> Sword </button>
+      <button class="btn btn-default btn-sm" ng-click="search = 'Twin Blades' "> Twin Blades </button>
+    </div>
+    <br>
+
+
+    Search: <input type="text" ng-model="search">
+    <button class="btn btn-warning btn-sm" ng-click="isShowImg = !isShowImg">
+      <text ng-if="isShowImg">  disable images </text>
+      <text ng-if="!isShowImg"> show images </text>
+    </button> <br>
+
+
+    <hr>
+  </div>
 </div>
+<div class="row" >
+  <div class="col-md-4" ng-repeat="weapon in weapons |filter:search" >
+    <b>{{weapon.name}} </b>
+    <br>
+    <text ng-repeat='c in weapon.components'>
+    {{c.material}} : {{c.shape}} <br>
+    </text>
+    <text ng-if="weapon.gems"> gems : {{weapon.gems}} <br> </text>
+    <text ng-if="weapon.enchantment"> enchantment : {{weapon.enchantment}} <br> </text>
+    <text ng-if="weapon.daytime"> daytime : {{weapon.daytime}} <br> </text>
+    <text ng-if="weapon.season"> season : {{weapon.season}} <br> </text>
+    <img ng-if="isShowImg" ng-src="{{weapon.img}}" alt=""> <br>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+  </div>
 </div>

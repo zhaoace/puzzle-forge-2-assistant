@@ -8,10 +8,8 @@
  * Controller of the puzzleForge2AssistantApp
  */
 angular.module('puzzleForge2AssistantApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, Weapons) {
+    $scope.weapons = Weapons.all();
+    $scope.weaponTypes= ['Armor', 'Axe', 'Claws', 'Mace', 'Shield', 'Shovel', 'Spear', 'Staff', 'Sword', 'TwinBlades' ];
+
   });

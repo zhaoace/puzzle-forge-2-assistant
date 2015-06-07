@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'puzzleForge2AssistantApp.services'
   ])
   .config(function ($routeProvider) {
     $routeProvider
