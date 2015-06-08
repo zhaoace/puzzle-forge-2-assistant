@@ -5,32 +5,52 @@
 
     <!-- <h2>{{weaponTypes}}</h2> -->
     <div class="btn-group">
-      <button class="btn btn-default btn-sm" ng-click="search = 'Armor' "> Armor </button>
-      <button class="btn btn-default btn-sm" ng-click="search = 'Axe' "> Axe </button>
-      <button class="btn btn-default btn-sm" ng-click="search = 'Claws' "> Claws </button>
-      <button class="btn btn-default btn-sm" ng-click="search = 'Mace' "> Mace </button>
-      <button class="btn btn-default btn-sm" ng-click="search = 'Shield' "> Shield </button>
-      <button class="btn btn-default btn-sm" ng-click="search = 'Shovel' "> Shovel </button>
-      <button class="btn btn-default btn-sm" ng-click="search = 'Spear' "> Spear </button>
-      <button class="btn btn-default btn-sm" ng-click="search = 'Staff' "> Staff </button>
-      <button class="btn btn-default btn-sm" ng-click="search = 'Sword' "> Sword </button>
-      <button class="btn btn-default btn-sm" ng-click="search = 'Twin Blades' "> Twin Blades </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Armor' "> Armor </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Axe' "> Axe </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Claws' "> Claws </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Mace' "> Mace </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Shield' "> Shield </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Shovel' "> Shovel </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Spear' "> Spear </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Staff' "> Staff </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Sword' "> Sword </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Twin Blades' "> Twin Blades </button>
+      <button class="btn btn-success btn-sm" ng-click="search_type = '' "> Any Type</button>
     </div>
     <br>
 
+    <div class="btn-group">
+      <button class="btn btn-info btn-sm" ng-click="search_season = 'Spring' "> Spring </button>
+      <button class="btn btn-info btn-sm" ng-click="search_season = 'Summer' "> Summer </button>
+      <button class="btn btn-info btn-sm" ng-click="search_season = 'Fall' "> Fall </button>
+      <button class="btn btn-info btn-sm" ng-click="search_season = 'Winter' "> Winter </button>
+      <button class="btn btn-success btn-sm" ng-click="search_season = '' "> All Season</button>
+    </div>
 
-    Search: <input type="text" ng-model="search">
+    <div class="btn-group">
+      <button class="btn btn-info btn-sm" ng-click="search_day = 'Day' "> Day </button>
+      <button class="btn btn-info btn-sm" ng-click="search_day = 'Night' "> Night </button>
+      <button class="btn btn-success btn-sm" ng-click="search_day = '' "> Anytime</button>
+    </div>
+    <button class="btn btn-success btn-sm" ng-click="search_type='';search_day='';search_season=''"> All Weapon </button>
+    <br>
+
     <button class="btn btn-warning btn-sm" ng-click="isShowImg = !isShowImg">
       <text ng-if="isShowImg">  disable images </text>
       <text ng-if="!isShowImg"> show images </text>
-    </button> <br>
+    </button>
 
+    <label class="bg-info">{{search_type}} </label>
+    <label class="bg-info">{{search_season}}  </label>
+    <label class="bg-info">{{search_day}}</label>
 
     <hr>
   </div>
 </div>
+
+
 <div class="row" >
-  <div class="col-md-4" ng-repeat="weapon in weapons |filter:search" >
+  <div class="col-md-4" ng-repeat="weapon in weapons |filter:search_type | filter:search_season| filter:search_day" >
     <b>{{weapon.name}} </b>
     <br>
     <text ng-repeat='c in weapon.components'>
