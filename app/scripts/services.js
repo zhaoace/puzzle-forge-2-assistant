@@ -695,11 +695,667 @@ angular.module('puzzleForge2AssistantApp.services', [])
     }];
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    var weaponsCn = [{
+  'name': 'Master Sword',
+  'components': [{
+    'material': '白银',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }, {
+    'material': '恒金',
+    'shape': '手柄'
+  }],
+  'gems': 4,
+  'daytime': '白天',
+  'type': 'Sword',
+  'img': 'images/0.png'
+}, {
+  'name': 'Excalibur',
+  'components': [{
+    'material': '黄金',
+    'shape': '锋刃'
+  }, {
+    'material': '黄金',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '手柄'
+  }],
+  'enchantment': 4,
+  'gems': 6,
+  'type': 'Sword',
+  'img': 'images/1.png'
+}, {
+  'name': 'Kuraudo Sutoraifu',
+  'components': [{
+    'material': '黑铁',
+    'shape': '锋刃'
+  }, {
+    'material': '黑铁',
+    'shape': '锋刃'
+  }, {
+    'material': '青铜',
+    'shape': '手柄'
+  }],
+  'enchantment': 16,
+  'gems': 6,
+  'type': 'Sword',
+  'img': 'images/2.png'
+}, {
+  'name': 'Light Saber',
+  'components': [{
+    'material': '水晶',
+    'shape': '锋刃'
+  }, {
+    'material': '水晶',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '手柄'
+  }],
+  'gems': 10,
+  'type': 'Sword',
+  'img': 'images/3.png'
+}, {
+  'name': 'Omens Sword',
+  'components': [{
+    'material': '白银',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '手柄'
+  }],
+  'enchantment': 10,
+  'gems': 6,
+  'type': 'Sword',
+  'img': 'images/4.png'
+}, {
+  'name': 'Frostmourne',
+  'components': [{
+    'material': '恒金',
+    'shape': '锋刃'
+  }, {
+    'material': '黑铁',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '手柄'
+  }],
+  'enchantment': 16,
+  'daytime': '夜晚',
+  'season': '冬',
+  'type': 'Sword',
+  'img': 'images/5.png'
+}, {
+  'name': 'Plasma Sword',
+  'components': [{
+    'material': '水晶',
+    'shape': '锋刃'
+  }, {
+    'material': '水晶',
+    'shape': '锋刃'
+  }, {
+    'material': '黑铁',
+    'shape': '手柄'
+  }],
+  'enchantment': 10,
+  'type': 'Sword',
+  'img': 'images/6.png'
+}, {
+  'name': 'Soul Edge',
+  'components': [{
+    'material': '黑铁',
+    'shape': '锋刃'
+  }, {
+    'material': '恒金',
+    'shape': '锋刃'
+  }, {
+    'material': '黑铁',
+    'shape': '手柄'
+  }],
+  'gems': 4,
+  'daytime': '夜晚',
+  'type': 'Sword',
+  'img': 'images/7.png'
+}, {
+  'name': 'Magical Wand',
+  'components': [{
+    'material': '青铜',
+    'shape': '手柄'
+  }, {
+    'material': '青铜',
+    'shape': '手柄'
+  }, {
+    'material': '黄金',
+    'shape': '手柄'
+  }],
+  'enchantment': 10,
+  'type': 'Staff',
+  'img': 'images/8.png'
+}, {
+  'name': 'Stick of Truth',
+  'components': [{
+    'material': '青铜',
+    'shape': '手柄'
+  }, {
+    'material': '青铜',
+    'shape': '手柄'
+  }, {
+    'material': '水晶',
+    'shape': '手柄'
+  }],
+  'enchantment': 1,
+  'season': '春',
+  'type': 'Staff',
+  'img': 'images/9.png'
+}, {
+  'name': 'D. Mall weapon',
+  'components': [{
+    'material': '水晶',
+    'shape': '手柄'
+  }, {
+    'material': '白银',
+    'shape': '手柄'
+  }, {
+    'material': '水晶',
+    'shape': '手柄'
+  }],
+  'gems': 10,
+  'daytime': '夜晚',
+  'type': 'Staff',
+  'img': 'images/10.png'
+}, {
+  'name': 'Crowbar',
+  'components': [{
+    'material': '黑铁',
+    'shape': '手柄'
+  }, {
+    'material': '黑铁',
+    'shape': '手柄'
+  }, {
+    'material': '青铜',
+    'shape': '手柄'
+  }],
+  'daytime': '白天',
+  'season': '秋',
+  'type': 'Staff',
+  'img': 'images/11.png'
+}, {
+  'name': 'Hyrule Shield',
+  'components': [{
+    'material': '黑铁',
+    'shape': '镀层'
+  }, {
+    'material': '黑铁',
+    'shape': '镀层'
+  }, {
+    'material': '白银',
+    'shape': '镀层'
+  }],
+  'gems': 4,
+  'daytime': '白天',
+  'type': 'Shield',
+  'img': 'images/12.png'
+}, {
+  'name': 'Medusa Shield',
+  'components': [{
+    'material': '白银',
+    'shape': '镀层'
+  }, {
+    'material': '恒金',
+    'shape': '镀层'
+  }, {
+    'material': '白银',
+    'shape': '镀层'
+  }],
+  'enchantment': 10,
+  'gems': 2,
+  'daytime': '夜晚',
+  'type': 'Shield',
+  'img': 'images/13.png'
+}, {
+  'name': 'Kapta Namerica Shield',
+  'components': [{
+    'material': '青铜',
+    'shape': '镀层'
+  }, {
+    'material': '白银',
+    'shape': '镀层'
+  }, {
+    'material': '黑铁',
+    'shape': '镀层'
+  }],
+  'gems': 3,
+  'type': 'Shield',
+  'img': 'images/14.png'
+}, {
+  'name': 'Cake Server',
+  'components': [{
+    'material': '白银',
+    'shape': '镀层'
+  }, {
+    'material': '白银',
+    'shape': '手柄'
+  }, {
+    'material': '黄金',
+    'shape': '手柄'
+  }],
+  'gems': 2,
+  'season': 'spring',
+  'type': 'Shovel',
+  'img': 'images/15.png'
+}, {
+  'name': 'Destiny Shovel',
+  'components': [{
+    'material': '黄金',
+    'shape': '镀层'
+  }, {
+    'material': '青铜',
+    'shape': '手柄'
+  }, {
+    'material': '黄金',
+    'shape': '手柄'
+  }],
+  'enchantment': 10,
+  'gems': 5,
+  'type': 'Shovel',
+  'img': 'images/16.png'
+}, {
+  'name': 'Forest Shovel',
+  'components': [{
+    'material': '水晶',
+    'shape': '镀层'
+  }, {
+    'material': '青铜',
+    'shape': '手柄'
+  }, {
+    'material': '青铜',
+    'shape': '手柄'
+  }],
+  'enchantment': 16,
+  'type': 'Shovel',
+  'img': 'images/17.png'
+}, {
+  'name': 'Korean Armor',
+  'components': [{
+    'material': '黄金',
+    'shape': '镀层'
+  }, {
+    'material': '黄金',
+    'shape': '镀层'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }],
+  'enchantment': 6,
+  'gems': 1,
+  'type': 'Armor',
+  'img': 'images/18.png'
+}, {
+  'name': 'Pegasus Armor',
+  'components': [{
+    'material': '青铜',
+    'shape': '镀层'
+  }, {
+    'material': '青铜',
+    'shape': '镀层'
+  }, {
+    'material': '青铜',
+    'shape': '锋刃'
+  }],
+  'enchantment': 16,
+  'gems': 4,
+  'type': 'Armor',
+  'img': 'images/19.png'
+}, {
+  'name': 'Elronmann Armor',
+  'components': [{
+    'material': '黑铁',
+    'shape': '镀层'
+  }, {
+    'material': '黑铁',
+    'shape': '镀层'
+  }, {
+    'material': '黄金',
+    'shape': '锋刃'
+  }],
+  'gems': 10,
+  'daytime': '白天',
+  'type': 'Armor',
+  'img': 'images/20.png'
+}, {
+  'name': 'Thor Hammer',
+  'components': [{
+    'material': '白银',
+    'shape': '镀层'
+  }, {
+    'material': '白银',
+    'shape': '镀层'
+  }, {
+    'material': '黑铁',
+    'shape': '手柄'
+  }],
+  'enchantment': 14,
+  'season': '冬',
+  'type': 'Mace',
+  'img': 'images/21.png'
+}, {
+  'name': 'Sulfuras Hammer',
+  'components': [{
+    'material': '黄金',
+    'shape': '镀层'
+  }, {
+    'material': '黄金',
+    'shape': '镀层'
+  }, {
+    'material': '黄金',
+    'shape': '手柄'
+  }],
+  'enchantment': 8,
+  'gems': 6,
+  'season': '夏',
+  'type': 'Mace',
+  'img': 'images/22.png'
+}, {
+  'name': 'Wert Leg',
+  'components': [{
+    'material': '青铜',
+    'shape': '镀层'
+  }, {
+    'material': '青铜',
+    'shape': '镀层'
+  }, {
+    'material': '黑铁',
+    'shape': '手柄'
+  }],
+  'enchantment': 2,
+  'daytime': '夜晚',
+  'season': 'spring',
+  'type': 'Mace',
+  'img': 'images/23.png'
+}, {
+  'name': 'JumpMan Hammer',
+  'components': [{
+    'material': '黑铁',
+    'shape': '镀层'
+  }, {
+    'material': '黑铁',
+    'shape': '镀层'
+  }, {
+    'material': '青铜',
+    'shape': '手柄'
+  }],
+  'season': '冬',
+  'type': 'Mace',
+  'img': 'images/24.png'
+}, {
+  'name': 'Longinus Spear',
+  'components': [{
+    'material': '黑铁',
+    'shape': '手柄'
+  }, {
+    'material': '黑铁',
+    'shape': '手柄'
+  }, {
+    'material': '黄金',
+    'shape': '锋刃'
+  }],
+  'enchantment': 10,
+  'type': 'Spear',
+  'img': 'images/25.png'
+}, {
+  'name': 'Death Scythe',
+  'components': [{
+    'material': '黑铁',
+    'shape': '手柄'
+  }, {
+    'material': '黑铁',
+    'shape': '手柄'
+  }, {
+    'material': '黑铁',
+    'shape': '锋刃'
+  }],
+  'enchantment': 20,
+  'daytime': '夜晚',
+  'type': 'Spear',
+  'img': 'images/26.png'
+}, {
+  'name': 'Chuen Spear',
+  'components': [{
+    'material': '黑铁',
+    'shape': '手柄'
+  }, {
+    'material': '黄金',
+    'shape': '手柄'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }],
+  'gems': 10,
+  'type': 'Spear',
+  'img': 'images/27.png'
+}, {
+  'name': 'Achilles Spear',
+  'components': [{
+    'material': '青铜',
+    'shape': '手柄'
+  }, {
+    'material': '青铜',
+    'shape': '手柄'
+  }, {
+    'material': '黄金',
+    'shape': '锋刃'
+  }],
+  'gems': 4,
+  'season': '夏',
+  'type': 'Spear',
+  'img': 'images/28.png'
+}, {
+  'name': 'Valhalla Axe',
+  'components': [{
+    'material': '白银',
+    'shape': '镀层'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }, {
+    'material': '黑铁',
+    'shape': '手柄'
+  }],
+  'enchantment': 8,
+  'season': '冬',
+  'type': 'Axe',
+  'img': 'images/29.png'
+}, {
+  'name': 'Carnagaxe',
+  'components': [{
+    'material': '水晶',
+    'shape': '镀层'
+  }, {
+    'material': '黄金',
+    'shape': '锋刃'
+  }, {
+    'material': '黑铁',
+    'shape': '手柄'
+  }],
+  'gems': 6,
+  'type': 'Axe',
+  'img': 'images/30.png'
+}, {
+  'name': 'Tomahawk',
+  'components': [{
+    'material': '黑铁',
+    'shape': '镀层'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }, {
+    'material': '青铜',
+    'shape': '手柄'
+  }],
+  'enchantment': 10,
+  'season': '夏',
+  'type': 'Axe',
+  'img': 'images/31.png'
+}, {
+  'name': 'Eternal Ice Axe',
+  'components': [{
+    'material': '水晶',
+    'shape': '镀层'
+  }, {
+    'material': '水晶',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '手柄'
+  }],
+  'gems': 4,
+  'season': '冬',
+  'type': 'Axe',
+  'img': 'images/32.png'
+}, {
+  'name': 'Tortoise Double-blade',
+  'components': [{
+    'material': '水晶',
+    'shape': '镀层'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }],
+  'enchantment': 10,
+  'gems': 5,
+  'type': 'Twin Blades',
+  'img': 'images/33.png'
+}, {
+  'name': 'Storm Double-blade',
+  'components': [{
+    'material': '黄金',
+    'shape': '镀层'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }],
+  'enchantment': 16,
+  'season': '秋',
+  'type': 'Twin Blades',
+  'img': 'images/34.png'
+}, {
+  'name': 'Dark Elf Double-blade',
+  'components': [{
+    'material': '黑铁',
+    'shape': '镀层'
+  }, {
+    'material': '黑铁',
+    'shape': '锋刃'
+  }, {
+    'material': '黑铁',
+    'shape': '锋刃'
+  }],
+  'enchantment': 20,
+  'daytime': '夜晚',
+  'type': 'Twin Blades',
+  'img': 'images/35.png'
+}, {
+  'name': 'Solar Double-blade',
+  'components': [{
+    'material': '黄金',
+    'shape': '镀层'
+  }, {
+    'material': '黄金',
+    'shape': '锋刃'
+  }, {
+    'material': '黄金',
+    'shape': '锋刃'
+  }],
+  'gems': 4,
+  'daytime': '白天',
+  'season': '夏',
+  'type': 'Twin Blades',
+  'img': 'images/36.png'
+}, {
+  'name': 'Volf Erin Claws',
+  'components': [{
+    'material': '白银',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }, {
+    'material': '白银',
+    'shape': '锋刃'
+  }],
+  'daytime': '夜晚',
+  'type': 'Claws',
+  'img': 'images/37.png'
+}, {
+  'name': 'Hungry Cat Claw',
+  'components': [{
+    'material': '青铜',
+    'shape': '锋刃'
+  }, {
+    'material': '青铜',
+    'shape': '锋刃'
+  }, {
+    'material': '青铜',
+    'shape': '锋刃'
+  }],
+  'enchantment': 6,
+  'gems': 3,
+  'daytime': '夜晚',
+  'type': 'Claws',
+  'img': 'images/38.png'
+}, {
+  'name': 'Ice Shurikens',
+  'components': [{
+    'material': '水晶',
+    'shape': '锋刃'
+  }, {
+    'material': '水晶',
+    'shape': '锋刃'
+  }, {
+    'material': '水晶',
+    'shape': '锋刃'
+  }],
+  'enchantment': 20,
+  'season': '冬',
+  'type': 'Claws',
+  'img': 'images/39.png'
+}];
+
+
+
     var all = function() {
       return weapons;
     };
+    var allCn = function() {
+      return weaponsCn;
+    };
     return {
-      all: all
+      all: all,
+      allCn: allCn
     };
 
 

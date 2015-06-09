@@ -9,6 +9,6 @@
  */
 angular.module('puzzleForge2AssistantApp')
   .controller('MainCtrl', function ($scope, Weapons) {
-    $scope.weapons = Weapons.all();
+    $scope.weapons = Weapons.allCn();
 
   });

@@ -5,17 +5,17 @@
 
     <!-- <h2>{{weaponTypes}}</h2> -->
     <div class="btn-group">
-      <button class="btn btn-info btn-sm" ng-click="search_type = 'Armor' "> Armor </button>
-      <button class="btn btn-info btn-sm" ng-click="search_type = 'Axe' "> Axe </button>
-      <button class="btn btn-info btn-sm" ng-click="search_type = 'Claws' "> Claws </button>
-      <button class="btn btn-info btn-sm" ng-click="search_type = 'Mace' "> Mace </button>
-      <button class="btn btn-info btn-sm" ng-click="search_type = 'Shield' "> Shield </button>
-      <button class="btn btn-info btn-sm" ng-click="search_type = 'Shovel' "> Shovel </button>
-      <button class="btn btn-info btn-sm" ng-click="search_type = 'Spear' "> Spear </button>
-      <button class="btn btn-info btn-sm" ng-click="search_type = 'Staff' "> Staff </button>
-      <button class="btn btn-info btn-sm" ng-click="search_type = 'Sword' "> Sword </button>
-      <button class="btn btn-info btn-sm" ng-click="search_type = 'Twin Blades' "> Twin Blades </button>
-      <button class="btn btn-success btn-sm" ng-click="search_type = '' "> Any Type</button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Armor' "> 护甲 </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Axe' "> 斧 </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Claws' "> 爪 </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Mace' "> 锤 </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Shield' "> 盾 </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Shovel' "> 铲 </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Spear' "> 枪 </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Staff' "> 杖 </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Sword' "> 剑 </button>
+      <button class="btn btn-info btn-sm" ng-click="search_type = 'Twin Blades' "> 双刃 </button>
+      <button class="btn btn-success btn-sm" ng-click="search_type = '' "> 所有种类 </button>
     </div>
     <br>
 
@@ -32,12 +32,12 @@
       <button class="btn btn-info btn-sm" ng-click="search_day = 'Night' "> Night </button>
       <button class="btn btn-success btn-sm" ng-click="search_day = '' "> Anytime</button>
     </div>
-    <button class="btn btn-success btn-sm" ng-click="search_type='';search_day='';search_season=''"> All Weapon </button>
+    <button class="btn btn-success btn-sm" ng-click="search_type='';search_day='';search_season=''"> 所有武器 </button>
     <br>
 
     <button class="btn btn-warning btn-sm" ng-click="isShowImg = !isShowImg">
-      <text ng-if="isShowImg">  disable images </text>
-      <text ng-if="!isShowImg"> show images </text>
+      <text ng-if="isShowImg">  关闭图片 </text>
+      <text ng-if="!isShowImg"> 显示图片 </text>
     </button>
 
     <label class="bg-info">{{search_type}} </label>
@@ -56,10 +56,10 @@
     <text ng-repeat='c in weapon.components'>
     {{c.material}} : {{c.shape}} <br>
     </text>
-    <text ng-if="weapon.gems"> gems : {{weapon.gems}} <br> </text>
-    <text ng-if="weapon.enchantment"> enchantment : {{weapon.enchantment}} <br> </text>
-    <text ng-if="weapon.daytime"> daytime : {{weapon.daytime}} <br> </text>
-    <text ng-if="weapon.season"> season : {{weapon.season}} <br> </text>
+    <text ng-if="weapon.gems"> 宝石 : {{weapon.gems}} <br> </text>
+    <text ng-if="weapon.enchantment"> 附魔 : {{weapon.enchantment}} <br> </text>
+    <text ng-if="weapon.daytime"> 时间 : {{weapon.daytime}} <br> </text>
+    <text ng-if="weapon.season"> 季节 : {{weapon.season}} <br> </text>
     <img ng-if="isShowImg" ng-src="{{weapon.img}}" alt=""> <br>
 
   </div>
